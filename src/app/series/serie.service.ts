@@ -8,7 +8,7 @@ import { HttpClient} from '@angular/common/http';
 })
 export class SerieService {
 
-  private url = 'https://localhost:3000/serie';
+  private url = 'http://localhost:3000';
 
   constructor(private http: HttpClient) { }
 

@@ -1,1 +1,16 @@
-<p>series works!</p>
+<h1>Series</h1>
+
+<table>
+    <thead>
+        <td>Name</td>
+        <td>Abstract</td>
+        <td>Release</td>
+    </thead>
+    <tbody>
+        <tr *ngFor="let serie of responseSeries.data">
+            <td>{{serie[name]}}</td>
+            <td>{{serie[abstrct]}}</td>
+            <td>{{serie[release]}}</td>
+        </tr>
+    </tbody>
+</table>
