@@ -9,7 +9,7 @@ import { Serie } from './serie.model'
 })
 export class SeriesComponent implements OnInit {
 
-  responseSeries: Serie[];
+  Series: Serie[];
 
   constructor(private serieService: SerieService) { }
 
@@ -18,8 +18,9 @@ export class SeriesComponent implements OnInit {
   }
 
   getSeries() {
-    this.serieService.getSeries().subscribe(responseSeries => {
-      this.responseSeries = responseSeries['data']
+    this.serieService.getSeries().subscribe(res => {
+      console.log(res)
+      this.Series = res['data']
     })
   }
 
