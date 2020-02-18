@@ -1,16 +1,25 @@
-<h1>Series</h1>
-
-<table>
-    <thead>
-        <td>Name</td>
-        <td>Abstract</td>
-        <td>Release</td>
-    </thead>
-    <tbody>
-        <tr *ngFor="let serie of responseSeries.data">
-            <td>{{serie[name]}}</td>
-            <td>{{serie[abstrct]}}</td>
-            <td>{{serie[release]}}</td>
-        </tr>
-    </tbody>
-</table>
+<div>
+    <h1>Series</h1>
+    <table>
+        <thead>
+            <td>Message</td>
+            <td>Name</td>
+            <td>Abstract</td>
+            <td>Release</td>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Serie of Series">
+                <td>{{ Serie.message }}</td>
+                <td>{{ Serie.name }}</td>
+                <td>{{ Serie.abstract }}</td>
+                <td>{{ Serie.release }}</td>
+                <td>
+                    <div>
+                        <button>Editar</button>
+                        <button>Deletar</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

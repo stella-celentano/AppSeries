@@ -1,10 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from "@angular/http";
+import { RouterModule} from "@angular/router";
+
 import { AppComponent } from './app.component';
 import { SeriesComponent } from './series/series.component';
-import { HttpClientModule } from '@angular/common/http';
+
+
+import { SerieService } from './series/serie.service'
+
+import { ROUTES } from './app-routing.module'
 
 @NgModule({
   declarations: [
@@ -14,9 +21,11 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpModule,
+    RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [SerieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
