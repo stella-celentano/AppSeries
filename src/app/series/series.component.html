@@ -1,21 +1,20 @@
-<div>
-    <h1>Series</h1>
-    <table>
+<div class="pageSeries">
+    <h1>Séries</h1>
+    <table class="tableConteudoSeries">
         <thead>
-            <td>Message</td>
-            <td>Name</td>
-            <td>Abstract</td>
-            <td>Release</td>
+            <td>Nome</td>
+            <td>Resumo</td>
+            <td>Data de Lançamento</td>
+            <td>Opções</td>
         </thead>
         <tbody>
             <tr *ngFor="let Serie of Series">
-                <td>{{ Serie.message }}</td>
                 <td>{{ Serie.name }}</td>
                 <td>{{ Serie.abstract }}</td>
-                <td>{{ Serie.release }}</td>
+                <td>{{ Serie.release | date: 'dd/MM/yyyy' }}</td>
                 <td>
                     <div>
-                        <button>Editar</button>
+                        <button (click)="editar()">Editar</button>
                         <button>Deletar</button>
                     </div>
                 </td>

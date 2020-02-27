@@ -11,12 +11,14 @@ import { SeriesComponent } from './series/series.component';
 
 import { SerieService } from './series/serie.service'
 
-import { ROUTES } from './app-routing.module'
+import { ROUTES } from './app-routing.module';
+import { CreateSerieComponent } from './series/create-serie/create-serie.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    SeriesComponent
+    SeriesComponent,
+    CreateSerieComponent
   ],
   imports: [
     BrowserModule,
