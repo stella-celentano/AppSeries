@@ -17,10 +17,6 @@ export class SeriesComponent implements OnInit {
     this.getSeries()
   }
 
-  teste(){
-    console.log('entrei viado')
-  }
-
   getSeries() {
     this.serieService.getSeries().subscribe(res => {
       console.log(res)

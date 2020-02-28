@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from "@angular/http";
 import { RouterModule} from "@angular/router";
+import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { SeriesComponent } from './series/series.component';
@@ -25,7 +26,8 @@ import { CreateSerieComponent } from './series/create-serie/create-serie.compone
     AppRoutingModule,
     HttpClientModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    FormsModule
   ],
   providers: [SerieService],
   bootstrap: [AppComponent]

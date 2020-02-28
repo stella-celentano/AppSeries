@@ -7,9 +7,16 @@ import { api } from './../app.api';
 @Injectable()
 export class SerieService {
 
+  url = 'http://localhost:4200/serie';
+
   constructor(private http: HttpClient) { }
 
   getSeries(): Observable<Serie[]> {
     return this.http.get<Serie[]>(`${api}/serie`);
   }
+
+  criar(serie: any) {
+    return this.http.post(`${api}/serie`, serie);
+  }
+  
 }
