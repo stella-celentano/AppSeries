@@ -13,13 +13,15 @@ import { SeriesComponent } from './series/series.component';
 import { SerieService } from './series/serie.service'
 
 import { ROUTES } from './app-routing.module';
-import { CreateSerieComponent } from './series/create-serie/create-serie.component'
+import { CreateSerieComponent } from './series/create-serie/create-serie.component';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SeriesComponent,
-    CreateSerieComponent
+    CreateSerieComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

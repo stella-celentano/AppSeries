@@ -12,7 +12,8 @@
                 <td>{{ Serie.release | date: 'dd/MM/yyyy' }}</td>
                 <td>
                     <div>
-                        <button type="button" (click)="getById(Serie._id)">Ver</button>
+                        <button type="button" (click)="updateSerie(Serie._id)">Atualizar</button>
+                        <button type="button" (click)="deleteSerie(Serie._id)">Apagar</button>
                     </div>
                 </td>
             </tr>

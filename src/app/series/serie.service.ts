@@ -14,11 +14,15 @@ export class SerieService {
   }
 
   getById(_id): Observable<Serie> {
-    return this.http.get<Serie>(`${api}/serie/${_id}`)
+    return this.http.get<Serie>(`${api}/serie/${_id}`);
   }
 
   criar(serie: any) {
     return this.http.post(`${api}/serie`, serie);
+  }
+
+  deleteSerie(_id): Observable<Serie> {
+    return this.http.delete<Serie>(`${api}/serie/${_id}`);
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SerieService } from './serie.service';
 import { Serie } from './serie.model'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-series',
@@ -11,7 +12,7 @@ export class SeriesComponent implements OnInit {
 
   Series: Serie[];
 
-  constructor(private serieService: SerieService) { }
+  constructor(private serieService: SerieService, private router: Router) { }
 
   ngOnInit() {
     this.getSeries();
@@ -35,5 +36,14 @@ export class SeriesComponent implements OnInit {
     this.serieService.getById(_id).subscribe(res => {
       console.log(res);
     })
+  }
+
+  deleteSerie(_id) {
+    if(confirm("Confirmar exclusão?")) {
+      this.serieService.deleteSerie(_id).subscribe(res =>{
+        console.log(res);
+        location.reload();
+      })
+    }
   }
 }
