@@ -14,7 +14,7 @@ import { SerieService } from './series/serie.service'
 
 import { ROUTES } from './app-routing.module';
 import { CreateSerieComponent } from './series/create-serie/create-serie.component';
-import { UpdateComponent } from './update/update.component';
+import { UpdateComponent } from './series/update/update.component';
 
 @NgModule({
   declarations: [
