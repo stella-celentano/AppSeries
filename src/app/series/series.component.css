@@ -10,3 +10,8 @@ td{
 h1{
     margin-left: 3%;
 }
+
+button{
+    font-size: 90%;
+    border-radius: 10%;
+}

@@ -1,1 +1,18 @@
-<p>update works!</p>
+<form [formGroup]="serieForm" (ngSubmit)="updateSerie(serieForm.value)">
+    <div class="form-group">
+        <label>Nome</label><br>
+        <input name="name" formControlName="name" type="text" class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Resumo </label><br>
+        <input name="abstract" formControlName="abstract" type="text" class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Lançamento </label><br>
+        <input name="release" formControlName="release" type="date" class="form-control">
+    </div>
+    <br>
+    <button type="submit">Submit</button>
+</form>

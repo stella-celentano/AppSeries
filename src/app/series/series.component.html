@@ -9,10 +9,11 @@
         <tbody>
             <tr *ngFor="let Serie of Series">
                 <td>{{ Serie.name }}</td>
+                <td>{{ Serie.abstract }}</td>
                 <td>{{ Serie.release | date: 'dd/MM/yyyy' }}</td>
                 <td>
                     <div>
-                        <button type="button" (click)="updateSerie(Serie._id)">Atualizar</button>
+                        <button type="button" [routerLink]="['/series/update', Serie._id]">Atualizar</button>
                         <button type="button" (click)="deleteSerie(Serie._id)">Apagar</button>
                     </div>
                 </td>

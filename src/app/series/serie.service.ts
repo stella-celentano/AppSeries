@@ -21,6 +21,10 @@ export class SerieService {
     return this.http.post(`${api}/serie`, serie);
   }
 
+  updateSerie(id, serie):Observable<any> {
+    return this.http.put<Serie>(`${api}/serie/${id}`, serie);
+  }
+
   deleteSerie(_id): Observable<Serie> {
     return this.http.delete<Serie>(`${api}/serie/${_id}`);
   }
