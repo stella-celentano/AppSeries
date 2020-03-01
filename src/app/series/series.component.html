@@ -2,20 +2,17 @@
     <h1>Séries</h1>
     <table class="tableConteudoSeries">
         <thead>
-            <td>Nome</td>
-            <td>Resumo</td>
-            <td>Data de Lançamento</td>
-            <td>Opções</td>
+            <td><b>Nome</b></td>
+            <td><b>Resumo</b></td>
+            <td><b>Lançamento</b></td>
         </thead>
         <tbody>
             <tr *ngFor="let Serie of Series">
                 <td>{{ Serie.name }}</td>
-                <td>{{ Serie.abstract }}</td>
                 <td>{{ Serie.release | date: 'dd/MM/yyyy' }}</td>
                 <td>
                     <div>
-                        <button (click)="editar()">Editar</button>
-                        <button>Deletar</button>
+                        <button type="button" (click)="getById(Serie._id)">Ver</button>
                     </div>
                 </td>
             </tr>

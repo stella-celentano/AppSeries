@@ -14,15 +14,26 @@ export class SeriesComponent implements OnInit {
   constructor(private serieService: SerieService) { }
 
   ngOnInit() {
-    this.getSeries()
+    this.getSeries();
   }
 
   getSeries() {
     this.serieService.getSeries().subscribe(res => {
-      console.log(res)
-      this.Series = res['data']
+      console.log(res);
+      console.log(res['status']);
+      console.log(res.body['data']);
+      console.log("Listagem efetuada com sucesso");
+      this.Series = res.body['data']
+    },
+    error => {
+      console.log(error.status);
+      console.log("Erro na listagem")
     })
   }
 
-
+  getById(_id) {
+    this.serieService.getById(_id).subscribe(res => {
+      console.log(res);
+    })
+  }
 }
