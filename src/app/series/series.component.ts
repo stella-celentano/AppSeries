@@ -14,11 +14,11 @@ export class SeriesComponent implements OnInit {
 
   constructor(private serieService: SerieService, private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getSeries();
   }
 
-  getSeries() {
+  getSeries(): void {
     this.serieService.getSeries().subscribe(res => {
       console.log(res);
       console.log(res['status']);
@@ -32,13 +32,13 @@ export class SeriesComponent implements OnInit {
     })
   }
 
-  getById(_id) {
+  getById(_id: string): void {
     this.serieService.getById(_id).subscribe(res => {
       console.log(res);
     })
   }
 
-  deleteSerie(_id) {
+  deleteSerie(_id: string): void {
     if(confirm("Confirmar exclusão?")) {
       this.serieService.deleteSerie(_id).subscribe(res =>{
         console.log(res);
